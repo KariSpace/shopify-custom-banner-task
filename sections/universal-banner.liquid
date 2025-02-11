@@ -13,7 +13,10 @@
   </div>
   <picture>
     <source media="(max-width: 768px)" srcset="{{ section.settings.mobile_image | asset_url }}">
-    <img src="{{ section.settings.desktop_image | asset_url }}" style="object-position: {{ section.settings.object_position }};" alt="{{ section.settings.alt_text }}">
+    <img src="{{ section.settings.desktop_image | asset_url }}" 
+         style="object-position: {{ section.settings.object_position }}; max-height: {{ section.settings.max_height }};" 
+         alt="{{ section.settings.alt_text }}" 
+         width="100%" height="auto">
   </picture>
 </div>
 
@@ -99,30 +102,11 @@
       "type": "color",
       "id": "button_text_color",
       "label": "Button Text Color"
-    },
-    {
-      "type": "text",
-      "id": "alt_text",
-      "label": "Image Alt Text"
-    },
-    {
-      "type": "select",
-      "id": "object_position",
-      "label": "Object Position",
-      "options": [
-        { "value": "center", "label": "Center" },
-        { "value": "top", "label": "Top" },
-        { "value": "bottom", "label": "Bottom" },
-        { "value": "left", "label": "Left" },
-        { "value": "right", "label": "Right" }
-      ],
-      "default": "center"
     }
   ],
   "presets": [
     {
-      "name": "Universal Banner",
-      "category": "Custom"
+      "name": "Universal Banner"
     }
   ]
 }
