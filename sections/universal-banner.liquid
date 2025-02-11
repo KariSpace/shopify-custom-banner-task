@@ -11,13 +11,12 @@
       {{ section.settings.button_text }}
     </a>
   </div>
-  <picture>
-    <source media="(max-width: 768px)" srcset="{{ section.settings.mobile_image | asset_url }}">
+    <!-- <source media="(max-width: 768px)" srcset="{{ section.settings.mobile_image | asset_url }}"> -->
     <img src="{{ section.settings.desktop_image | asset_url }}" 
          style="object-position: {{ section.settings.object_position }}; max-height: {{ section.settings.max_height }};" 
          alt="{{ section.settings.alt_text }}" 
          width="auto" height="{{ section.settings.max_height }}">
-  </picture>
+
 </div>
 
 {% schema %}
