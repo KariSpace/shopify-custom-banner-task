@@ -223,11 +223,13 @@
     "universal_banner_KNfGfK": {
       "type": "universal-banner",
       "settings": {
+        "mobile_image": "shopify://shop_images/istockphoto-1070373388-612x612.jpg",
+        "desktop_image": "shopify://shop_images/Porque_deve_ter_uma_loja_online_0.png",
         "max_height": 820,
         "horizontal_alignment": "center",
         "title": "This is my custom banner",
         "title_color": "#334fb4",
-        "title_size": 36,
+        "title_size": 40,
         "title_weight": "bold",
         "button_text": "Click me",
         "button_link": "shopify://pages/contact",
