@@ -16,7 +16,7 @@
     <img src="{{ section.settings.desktop_image | asset_url }}" 
          style="object-position: {{ section.settings.object_position }}; max-height: {{ section.settings.max_height }};" 
          alt="{{ section.settings.alt_text }}" 
-         width="100%" height="auto">
+         width="auto" height="{{ section.settings.max_height }}">
   </picture>
 </div>
 
