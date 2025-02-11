@@ -14,7 +14,7 @@
       "settings": {
         "mobile_image": "shopify://shop_images/istockphoto-1070373388-612x612.jpg",
         "desktop_image": "shopify://shop_images/premium_photo-1684785617500-fb22234eeedd.jpg",
-        "max_height": 850,
+        "max_height": 460,
         "horizontal_alignment": "center",
         "title": "This is my custom banner",
         "title_color": "#334fb4",
