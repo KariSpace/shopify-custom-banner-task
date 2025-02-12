@@ -1,3 +1,17 @@
+Custom banner can be fount at **sections/universal-banner.liquid**
+
+Desktop: 
+<img width="956" alt="Screenshot 2025-02-12 at 17 59 25" src="https://github.com/user-attachments/assets/f5cc16dc-1888-4066-99b4-acb38161b8ef" />
+
+
+Mobile: 
+
+<img width="342" alt="Screenshot 2025-02-12 at 17 54 41" src="https://github.com/user-attachments/assets/11c1c02e-fb08-4066-ace8-8ee16e0d2a87" />
+<img width="389" alt="Screenshot 2025-02-12 at 18 00 41" src="https://github.com/user-attachments/assets/84f56d69-18d9-4cce-b925-b625b3ada9a1" />
+
+
+
+
 # Dawn
 
 [![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain)
