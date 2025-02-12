@@ -1,7 +1,7 @@
 {{ 'quick-order-list.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
 
-<div class="universal-banner {% if section.settings.layout == 'image_first' %}image-first{% else %}text-first{% endif %}">
+<div class="universal-banner {% if section.settings.layout == 'image_first' %}image-first{% else %}text-first{% endif %}" style="margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px; margin-left: {{ section.settings.margin_left }}px; margin-right: {{ section.settings.margin_right }}px;">
   {%- if section.settings.desktop_image != blank or section.settings.mobile_image != blank -%}
     {%- assign desktop_image = section.settings.desktop_image | image_url: height: section.settings.max_height -%}
     {%- assign mobile_image = section.settings.mobile_image | image_url: height: section.settings.max_height -%}
@@ -49,6 +49,7 @@
   .banner-image {
     width: 100%;
     max-width: {{ section.settings.max_height }}px;
+    line-height: 0;
   }
 
   .zoom-image {
@@ -170,6 +171,50 @@
       "type": "color",
       "id": "button_text_color",
       "label": "Button Text Color"
+    },
+    {
+      "type": "header",
+      "content": "Margin Settings"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top Margin",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom Margin",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_left",
+      "label": "Left Margin",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_right",
+      "label": "Right Margin",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0,
+      "unit": "px"
     }
   ],
   "presets": [
