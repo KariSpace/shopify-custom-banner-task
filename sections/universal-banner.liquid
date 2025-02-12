@@ -2,22 +2,63 @@
 
 <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
 
-<div class="universal-banner" style="max-height: {{ section.settings.max_height }};">
+<div class="universal-banner">
   <div class="banner-content" style="text-align: {{ section.settings.horizontal_alignment }};">
-    <h1 style="font-size: {{ section.settings.title_size }}; font-weight: {{ section.settings.title_weight }}; color: {{ section.settings.title_color }};">
+    <h1 style="font-size: {{ section.settings.title_size }}px; font-weight: {{ section.settings.title_weight }}; color: {{ section.settings.title_color }};">
       {{ section.settings.title }}
     </h1>
     <a href="{{ section.settings.button_link }}" class="button" style="background-color: {{ section.settings.button_background_color }}; color: {{ section.settings.button_text_color }};">
       {{ section.settings.button_text }}
     </a>
   </div>
-  <source media="(max-width: 768px)" srcset="{{ section.settings.mobile_image | asset_url }}">
-  <img src="{{ section.settings.desktop_image | asset_url }}" 
-       style="object-position: {{ section.settings.object_position }}; max-height: {{ section.settings.max_height }};" 
-       alt="{{ section.settings.alt_text }}" 
-       width="auto" height="{{ section.settings.max_height }}">
-
+  {%- if section.settings.desktop_image != blank or section.settings.mobile_image != blank -%}
+    {%- if section.settings.desktop_image != blank -%}
+      {{ section.settings.desktop_image | image_url: height: section.settings.max_height | image_tag: loading: 'lazy', class: 'desktop-image zoom-image' }}
+    {%- endif -%}
+    {%- if section.settings.mobile_image != blank -%}
+      {{ section.settings.mobile_image | image_url: height: section.settings.max_height | image_tag: loading: 'lazy', class: 'mobile-image zoom-image' }}
+    {%- endif -%}
+  {%- else -%}
+    {{ 'image' | placeholder_svg_tag: 'zoom-image placeholder' }}
+  {%- endif -%}
 </div>
+
+<style>
+  .universal-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .banner-content {
+    text-align: center;
+    width: calc(100% - {{ section.settings.max_height }}px);
+  }
+  .desktop-image {
+    display: block;
+  }
+  .mobile-image {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .banner-content {
+      width: 100%;
+    }
+    .universal-banner {
+      flex-wrap: wrap;
+    }
+    .desktop-image {
+      display: none;
+    }
+    .mobile-image {
+      display: block;
+    }
+    .zoom-image {
+      width: 100%;
+      object-fit: cover;
+      overflow: hidden;
+    }
+  }
+</style>
 
 {% schema %}
 {
