@@ -9,7 +9,12 @@ Mobile:
 <img width="342" alt="Screenshot 2025-02-12 at 17 54 41" src="https://github.com/user-attachments/assets/11c1c02e-fb08-4066-ace8-8ee16e0d2a87" />
 <img width="389" alt="Screenshot 2025-02-12 at 18 00 41" src="https://github.com/user-attachments/assets/84f56d69-18d9-4cce-b925-b625b3ada9a1" />
 
+Settings:
 
+
+<img width="293" alt="Screenshot 2025-02-12 at 18 11 40" src="https://github.com/user-attachments/assets/682eda71-b680-474f-8e42-50b31f291aba" />
+<img width="305" alt="Screenshot 2025-02-12 at 18 11 28" src="https://github.com/user-attachments/assets/72c78045-3597-44f5-9432-651c7d862315" />
+<img width="293" alt="Screenshot 2025-02-12 at 18 11 50" src="https://github.com/user-attachments/assets/25868f5f-2446-4304-8c9a-22683cbe0a9a" />
 
 
 # Dawn
